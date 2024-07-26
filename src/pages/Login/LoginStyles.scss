@@ -1,0 +1,103 @@
+.main-div {
+  width: 35%;
+  min-width: 300px;
+  top: 50%;
+  left: 50%;
+  padding: 50px;
+  margin-inline: auto;
+  margin-top: 3rem;
+  background: var(--navbar-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+
+  h1 {
+    margin-bottom: 25px;
+    /* color: var(--alternate-color); */
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--alternate-color);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid var(--alternate-color);
+    background: transparent;
+    outline: none;
+  }
+
+  label {
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-size: 16px;
+    transition: 0.5s;
+  }
+
+  a {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    display: block;
+    margin-inline: auto;
+    font-size: 14px;
+  }
+
+  a:hover {
+    color: gray;
+  }
+
+  button {
+    border: 0.15rem solid var(--hover-color);
+  }
+  & button:last-child {
+    margin-top: 2rem;
+  }
+  /* +++++++++++++++++++++++++++++++++ Forget password ++++++++++++++++++++ */
+  .forget-navigation {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    gap: 20rem;
+
+    a {
+      flex-basis: 10%;
+      display: block;
+    }
+
+    svg {
+      margin-left: auto;
+    }
+  }
+
+  /* +++++++++++++++++++++++++++++++++ Sign up ++++++++++++++++++++ */
+
+  select {
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    color: var(--alternate-color);
+    background-color: transparent;
+  }
+
+  select option {
+    color: var(--alternate-color);
+    background-color: var(--navbar-color);
+  }
+
+  select + button {
+    margin-top: 2rem;
+    display: block;
+  }
+}
+
+.error {
+  border-bottom: 1px solid rgb(196, 91, 91) !important;
+}
+
+.input-box {
+  color: rgb(196, 91, 91) !important;
+}
