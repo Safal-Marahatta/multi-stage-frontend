@@ -87,13 +87,13 @@ import { changeProfileImage } from "./Api/profile";
 
 axios.defaults.withCredentials = true;
 
-if (import.meta.env.VITE_ENV === "development") axios.defaults.baseURL = "http://localhost:5000";
+if (import.meta.env.VITE_ENV === "development") axios.defaults.baseURL = "http://52.221.226.191:5000";
 else axios.defaults.baseURL = import.meta.env.VITE_SERVER_1;
 
 export const customAxios = axios.create({
   baseURL:
     import.meta.env.VITE_ENV === "development"
-      ? "http://localhost:8000"
+      ? "http://52.221.226.191:8000"
       : import.meta.env.VITE_SERVER_2,
   withCredentials: true,
 });
