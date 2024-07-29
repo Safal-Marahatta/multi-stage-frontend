@@ -25,7 +25,6 @@
 
 
 
-
 # Use the official Node.js image as a base
 FROM node:14 as build
 
@@ -44,7 +43,6 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-EXPOSE 80
 
 # Use lightweight Nginx image for serving static files
 FROM nginx:alpine
