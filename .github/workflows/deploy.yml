@@ -130,7 +130,7 @@ jobs:
              docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
              docker stop frontend || true
              docker rm frontend || true
-             docker run -d --name frontend -p 5173:5173 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
+             docker run -d --name frontend -p 80:80 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
 
 #at the server do this 
 
