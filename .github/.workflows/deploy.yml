@@ -131,3 +131,32 @@ jobs:
              docker stop frontend || true
              docker rm frontend || true
              docker run -d --name frontend -p 5173:5173 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
+
+#at the server do this 
+
+##############To install the AWS CLI, run the following commands.
+# $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+# unzip awscliv2.zip
+# sudo ./aws/install
+
+
+#############run this code in server
+#aws configure
+#---->aws comand line ko acess id ra acess secret key halne
+##########################se the following steps to authenticate and push an image to your repository. For additional registry authentication methods, including the Amazon ECR credential helper, see Registry Authentication .
+
+# Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
+# aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com
+# Note: If you receive an error using the AWS CLI, make sure that you have the latest version of the AWS CLI and Docker installed.
+
+# Build your Docker image using the following command. For information on building a Docker file from scratch see the instructions here . You can skip this step if your image is already built:
+# docker build -t safal-frontend-dev .      ==>>already done by deploy.yml
+
+# After the build completes, tag your image so you can push the image to this repository:----->>already done by deploy.yml ,so no need to go inside the server and execute this command
+# docker tag safal-frontend-dev:latest 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
+
+# Run the following command to push this image to your newly created AWS repository:------>>already done by deploy.yml 
+# docker push 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
+
+
+
