@@ -127,10 +127,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.EC2_PORT}}
           script: |
-             docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
-             docker stop frontend || true
-             docker rm frontend || true
-             docker run -d --name frontend -p 80:80 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
+            sudo docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
+            sudo docker stop frontend || true
+            sudo docker rm frontend || true
+            sudo docker run -d --name frontend -p 80:80 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/safal-frontend-dev:latest
 
 #at the server do this 
 
