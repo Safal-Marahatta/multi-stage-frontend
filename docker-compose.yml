@@ -2,19 +2,15 @@ version: "3.8"
 
 services:
   client-react:
-    container_name: client_React
-    restart: unless-stopped
-    env_file:
-      - .env
-    image: client:1.0.0
     build:
       context: .
       dockerfile: Dockerfile
+    image: frontend:latest
     ports:
-      - 5173:5173
+      - "5173:5173"
     networks:
-      - shared-network
+      - app-network
 
 networks:
-  shared-network:
-    external: true
+  app-network:
+    driver: bridge
