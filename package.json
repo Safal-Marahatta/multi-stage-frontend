@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "http://localhost:5000",
+  "proxy": "http://52.221.226.191:5000",
   "private": true,
   "version": "0.0.0",
   "type": "module",
